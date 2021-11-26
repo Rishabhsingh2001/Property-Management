@@ -1,81 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-input[type=text], input[type=E-mail] , input[type=password], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=submit] {
-  width: 50%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-</style>
-<title>
-</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment form</title>
+    <script type="text/javascript">
+      function warn() {
+        alert ("Request for Appointment submitted successfully");
+      
+      }
+    </script>
+    <style>
+      div { border-radius: 5px;
+            background-color: #eecda7;
+            padding: 20px;
+          }
+      h1 { text-align: center;}
+    </style>
 </head>
-<body background="form img.jpg"
-background-repeat: no repeat;
-topmargin="75" leftmargin="75" marginwidth="75" marginheight="50" 
->
- 
-<div>
-   <form action="process.php">
-<center> 
-
-<label for="fname">First Name</label>
-    <input type="text" name="firstname" placeholder="Your name..">
-
-
-<label for="lname">Last Name</label>
- <input type="text" name="lastname" placeholder="Your last name..">
-
-
-
-<p>E-mail
-    <input type="E-mail" placeholder="Enter your E-mail..">
-</p> 
-
-
-<p>password
-<input type="Password" placeholder="Password">
-</p> 
-
-
-<p>Gender</br>
-<input type="radio" name="Gender" value="male" checked> male
-<input type="radio" name="Gender" value="female"> female</br>
-</p> 
-
-<p>
-<input type="submit" value="Book Apointment">
-</p>   </center>
-
-</form>   
-
-</div>
+<body background="bg.jpg" background-repeat: no repeat; topmargin="75" leftmargin="75" marginwidth="75" marginheight="50">   
+  <h1>APPOINTMENT FORM</h1>
+   <div>
     
+    <form action="">
+            <fieldset>
+              <legend>Personal Details</legend>
+              <div>
+              <label>
+                Name
+                <input type="text" name="name" required>
+              </label>
+              <label>
+                Email address
+                  <input type="email" name="email" required>
+                </label>
+                <label>
+                Phone number
+                  <input type="tel" name="phone">
+                </label>
+              </div>
+            </fieldset>
+            <fieldset>
+                <legend>Appointment request</legend>
+                <div>
+                  <label>
+                    Date
+                    <input type="date" name="Appointment request" required>
+                  </label>
+                  <div>
+                    <label>
+                      <input type="hidden" name="Morning desired" value="no">
+                      <input type="checkbox" name="Morning desired" value="yes">
+                      Morning
+                    </label>
+                    <label>
+                      <input type="hidden" name="Afternoon desired" value="no">
+                      <input type="checkbox" name="Afternoon desired" value="yes">
+                      Afternoon
+                    </label>
+                  </div>
+                </div>
+
+                <label for="textbox"> Description of House</label></br>
+                <textarea id="textbox" rows="5" cols="50" placeholder="Mention description of house here"> </textarea>
+                <div>
+                  <p>Confirmation request by</p>
+                  <label>
+                    <input type="radio" name="Confirmation requested by" value="email" checked>
+                    Email
+                  </label>
+                  <label>
+                    <input type="radio" name="Confirmation requested by" value="phone">
+                    Phone call
+                  </label>
+                </div>
+              </fieldset>
+              <div>
+                <label>
+                <input type="submit" value="Submit request" onclick= "warn();">
+                </label>
+                <label>
+                    <button onclick="window.print()">Print this page</button>
+                </label>
+               </div>
+            </form>
+    </form>
+    </div>
 </body>
 </html>
